@@ -1,8 +1,14 @@
 return function f(vegas,pred,bankroll) {
+  
   if (vegas > pred) {
-    return -1*bankroll/20;
+    //Bet on away team: so negative.
+    var b = 1/(1-vegas)-1;
+    var p = 1-pred;
+    return -1*bankroll*(p*(b+1)-1)/b;
   }
   else {
-    return bankroll/20;
+    var b = 1/(vegas)-1;
+    var p = pred;
+    return bankroll*(p*(b+1)-1)/b;
   }
 };
