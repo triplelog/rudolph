@@ -1,6 +1,6 @@
 return function f(awin,aloss,hwin,hloss) {
-  var probA = (awin+10)/(awin+aloss+10);
-  var probH = (hwin+10)/(hwin+hloss+10);
-  return probA;
-  return (probH-probA*probH)/(probA+probH-2*probA*probH);
+  var probAA = (awin+10)/(awin+aloss+10);
+  var probHH = (hwin+10)/(hwin+hloss+10);
+  return probAA+100;
+  return (probHH-probAA*probHH)/(probAA+probHH-2*probAA*probHH);
 };
