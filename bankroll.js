@@ -1,5 +1,5 @@
 return function f(vegas,pred,bankroll) {
-  if (pred > vegas) {
+  if (vegas > pred) {
     return 0;
   }
   else {
